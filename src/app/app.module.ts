@@ -35,7 +35,10 @@ import { CurrentOptionComponent } from './current-option/current-option.componen
     ProductosModule,
     ProveedoresModule,
     OrdenesModule,
-    DetalleModule
+    DetalleModule,
+    RouterModule.forRoot(
+      appRoutes
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
