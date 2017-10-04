@@ -1,5 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {RouterModule,Routes}from '@angular/router';
+import{IndexComponent}from './clientes/index/index.component';
+import{AddComponent as ordenesaddcomponent} from './ordenes/add/add.component';
+
+const appRoutes: Routes = [
+  {path:  'clientes/index',component: IndexComponent},
+  {path:  'ordenes/add',component: ordenesaddcomponent},
+]
+
+
 import{ClientesModule}from './clientes/clientes.module';
 import{EmpleadosModule}from './empleados/empleados.module';
 import{ProductosModule}from './productos/productos.module';
