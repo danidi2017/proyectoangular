@@ -1,6 +1,41 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule,Routes}from '@angular/router';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {
+  MdAutocompleteModule, 
+  MdButtonModule,
+  MdButtonToggleModule,
+  MdCardModule,
+  MdCheckboxModule,
+  MdChipsModule,
+  MdCoreModule,
+  MdDatepickerModule,
+  MdDialogModule,
+  MdExpansionModule,
+  MdGridListModule,
+  MdIconModule,
+  MdInputModule, 
+  MdListModule,
+  MdMenuModule,
+  MdNativeDateModule,
+  MdPaginatorModule,
+  MdProgressBarModule,
+  MdProgressSpinnerModule,
+  MdRadioModule,
+  MdRippleModule,
+  MdSelectModule,
+  MdSidenavModule,
+  MdSliderModule,
+  MdSlideToggleModule,
+  MdSnackBarModule, 
+  MdSortModule, 
+  MdTableModule,
+  MdTabsModule,
+  MdToolbarModule,
+  MdTooltipModule,
+  
+  } from '@angular/material';
 import{IndexComponent}from './clientes/index/index.component';
 import{AddComponent as ordenesaddcomponent} from './ordenes/add/add.component';
 
@@ -30,6 +65,7 @@ import { CurrentOptionComponent } from './current-option/current-option.componen
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     ClientesModule,
     EmpleadosModule,
     ProductosModule,
