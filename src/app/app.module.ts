@@ -9,10 +9,14 @@ import{DetalleModule}from './detalle/detalle.module';
 
 
 import { AppComponent } from './app.component';
+import { MenuComponent } from './menu/menu.component';
+import { CurrentOptionComponent } from './current-option/current-option.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent,
+    CurrentOptionComponent
   ],
   imports: [
     BrowserModule,
