@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { FormsModule } from '@angular/forms';
 import {
@@ -75,7 +76,8 @@ import { IndexComponent } from './index/index.component';
     MdTableModule,
     MdTabsModule,
     MdToolbarModule,
-    MdTooltipModule
+    MdTooltipModule,
+    BrowserAnimationsModule
   ],
   declarations: [AddComponent, ListComponent, IndexComponent]
 })

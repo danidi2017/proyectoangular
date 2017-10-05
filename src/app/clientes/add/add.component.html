@@ -1,30 +1,31 @@
-<form>
+<form #addform="ngForm">
   <table>
     <tr>
       <td>
-          <md-form-field class="example-full-width">
-              <input mdInput placeholder="Favorite food" value="Sushi">
+          <md-form-field>
+              <input required mdInput placeholder="Nombre" [(ngModel)]="clientes.nombre" name="nombre" #nombre="ngModel">
+              <md-error>
+                Por Favor Ingrese un Nombre Valido
+              </md-error>
             </md-form-field>
       </td>
     </tr>
     <tr>
         <td>
-        cedula
+            <md-form-field>
+                <input required mdInput placeholder="Direccion" [(ngModel)]="clientes.direccion" name="direccion" #direccion="ngModel">
+                <md-error>
+                  Por Favor Ingrese una Direccion Valida
+                </md-error>
+              </md-form-field>
         </td>
-      </tr>
-      <tr>
-        <td>
-        direccion
-         </td>
-        </tr>
-        <tr>
-             <td>
-        email
-         </td>
-            </tr>
-          <tr>
+    </tr>
+             <tr>
               <td>
-        boton guardar
+                  <div class="button-row">
+                      <button [disabled]="!addform.valid" md-raised-button color="accent">Guardar</button>
+                  </div>
+                    
              </td>
               </tr>
   </table>
