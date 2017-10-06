@@ -1,7 +1,7 @@
 export class clientes {
     nombre:string;
-    cedula:string;
-    dirreccion:string;
+    cedula:number;
+    direccion:string;
     email:string;
 
 }
