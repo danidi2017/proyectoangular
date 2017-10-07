@@ -80,5 +80,6 @@ import { IndexComponent } from './index/index.component';
     BrowserAnimationsModule
   ],
   declarations: [AddComponent, ListComponent, IndexComponent]
+  providers:[clientesServices]
 })
 export class ClientesModule { }
