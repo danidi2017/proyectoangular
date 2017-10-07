@@ -15,7 +15,9 @@ export class AddComponent implements OnInit {
   ngOnInit() {
     this.clientes = new clientes();
   }
-
+  onNewClick(){
+    this.clientes= new clientes();
+  }
   onSaveClick(){
     //alert("se ha guardado el cliente: " + this.clientes.nombre);
     this.ClientesService.clientesList.push(this.clientes);
