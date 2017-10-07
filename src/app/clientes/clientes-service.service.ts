@@ -3,7 +3,7 @@ import { clientes } from "./clientes";
 
 @Injectable()
 
-export class ClientesServiceService {
+export class ClientesService {
 
   clientesList:Array<clientes>;
 

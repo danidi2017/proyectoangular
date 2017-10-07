@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {clientes} from "../clientes";
+import { ClientesService } from "../clientes-service.service";
 @Component({
   selector: 'clientes-add',
   templateUrl: './add.component.html',
@@ -9,14 +10,15 @@ export class AddComponent implements OnInit {
   
   clientes: clientes;
   
-  constructor() { }
+  constructor(private ClientesService: ClientesService) { }
 
   ngOnInit() {
     this.clientes = new clientes();
   }
 
   onSaveClick(){
-    alert("se ha guardado el cliente: " + this.clientes.nombre);
+    //alert("se ha guardado el cliente: " + this.clientes.nombre);
+    this.ClientesService.clientesList.push(this.clientes);
   }
 
 }

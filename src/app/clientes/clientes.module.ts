@@ -40,6 +40,7 @@ import {
 import { AddComponent } from './add/add.component';
 import { ListComponent } from './list/list.component';
 import { IndexComponent } from './index/index.component';
+import { ClientesService } from "./clientes-service.service";
 
 @NgModule({
   imports: [
@@ -79,7 +80,7 @@ import { IndexComponent } from './index/index.component';
     MdTooltipModule,
     BrowserAnimationsModule
   ],
-  declarations: [AddComponent, ListComponent, IndexComponent]
-  providers:[clientesServices]
+  declarations: [AddComponent, ListComponent, IndexComponent],
+  providers: [ClientesService],
 })
 export class ClientesModule { }
