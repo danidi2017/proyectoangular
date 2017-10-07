@@ -15,4 +15,8 @@ export class AddComponent implements OnInit {
     this.clientes = new clientes();
   }
 
+  onSaveClick(){
+    alert("se ha guardado el cliente: " + this.clientes.nombre);
+  }
+
 }
