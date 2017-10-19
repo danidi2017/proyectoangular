@@ -40,9 +40,12 @@ import {
 import{IndexComponent}from './clientes/index/index.component';
 import{AddComponent as ordenesaddcomponent} from './ordenes/add/add.component';
 
+
+
 const appRoutes: Routes = [
   {path:  'clientes/index',component: IndexComponent},
   {path:  'ordenes/add',component: ordenesaddcomponent},
+ 
 ]
 
 
