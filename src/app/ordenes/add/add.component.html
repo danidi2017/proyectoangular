@@ -1,1 +1,44 @@
-
+<form #addform="ngForm">
+    <table>
+      <tr>
+        <td>
+            <md-form-field>
+                <input required mdInput placeholder="Empleados" [(ngModel)]="ordenes.empleados" name="empleados" #empleados="ngModel">
+                <md-error>
+                  Por Favor Ingrese un Nombre de empleado Valido
+                </md-error>
+              </md-form-field>
+        </td>
+      </tr>
+      <tr>
+          <td>
+              <md-form-field>
+                  <input required mdInput placeholder="Cliente" [(ngModel)]="ordenes.cliente" name="cliente" #cliente="ngModel">
+                  <md-error>
+                    Por Favor Ingrese un id de cliente  Valido
+                  </md-error>
+                </md-form-field>
+          </td>
+        </tr>
+      <tr>
+          <td>
+              <md-form-field>
+                  <input required mdInput placeholder="Fecha" [(ngModel)]="ordenes.fecha" name="fecha" #fecha="ngModel">
+                  <md-error>
+                    Por Favor Ingrese una fecha Valida
+                  </md-error>
+                </md-form-field>
+          </td>
+      </tr>
+               <tr>
+                <td>
+                    <div class="button-row">
+                        <button [disabled]="!addform.valid" md-raised-button color="accent" (click)="onSaveClick()">Guardar</button>
+                        <button md-raised-button color="accent" (click)="onNewClick()">Nuevo Registro</button>
+                    </div>
+                      
+               </td>
+                </tr>
+    </table>
+  </form>
+  
