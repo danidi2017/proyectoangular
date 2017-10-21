@@ -1,4 +1,4 @@
-<table  border ="1">
+<!--<table  border ="1">
         <tr>
           <td>fecha</td>
           <td>proveedor</td>
@@ -12,4 +12,29 @@
           <td>{{ordenes.producto}}</td>
       </tr>
       </table>
+      <br/>-->
+      <div class="container">
+      <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Fecha</th>
+                <th scope="col">Proveedor</th>
+                <th scope="col">Cliente</th>
+                <th scope="col">Producto</th>
+              </tr>
+            </thead>
+            <tbody>        
+              <tr *ngFor="let ordenes of OrdenesService.ordenesList">
+                <!--<th scope="row">1</th>-->
+                <td>{{ordenes.fecha}}</td>
+                <td>{{ordenes.proveedor}}</td>
+                <td>{{ordenes.cliente}}</td>
+                <td>{{ordenes.producto}}</td>
+              </tr>      
+            </tbody>
+          </table>
+      </div>
+      <br/>
+      <br/>
+      <br/>
       <br/>

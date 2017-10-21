@@ -1,4 +1,4 @@
-<table  border="1">
+<!--<table  border="1">
   <tr>
     <td>cedula</td>
     <td>nombrecontacto</td>
@@ -12,7 +12,28 @@
     <td>{{clientes.email}}</td>
 </tr>
 </table>
-<br/>
+<br/>-->
+<div class="container">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Cedula</th>
+        <th scope="col">Nombre Contacto</th>
+        <th scope="col">Direccion</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>        
+      <tr *ngFor="let clientes of ClientesService.clientesList">
+        <!--<th scope="row">1</th>-->
+        <td>{{clientes.cedula}}</td>
+        <td>{{clientes.nombrecontacto}}</td>
+        <td>{{clientes.direccion}}</td>
+        <td>{{clientes.email}}</td>
+      </tr>      
+    </tbody>
+  </table>
+</div>
 
 <!--<div class="example-container mat-elevation-z8">
     <md-table #table [dataSource]="dataSource">

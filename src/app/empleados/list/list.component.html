@@ -1,5 +1,5 @@
 
-<table  border="1">
+<!--<table  border="1">
     <tr>
       <td>Cédula</td>
       <td>Fecha Nacimiento</td>
@@ -13,4 +13,24 @@
       <td>{{empleados.genero}}</td>
   </tr>
   </table>
-  <br/>
+  <br/>-->
+
+  <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Cedula</th>
+            <th scope="col">Fecha de Nacimiento</th>
+            <th scope="col">Cargo</th>
+            <th scope="col">Genero</th>
+          </tr>
+        </thead>
+        <tbody>        
+          <tr *ngFor="let empleados of EmpleadosService.empleadoList">
+            <!--<th scope="row">1</th>-->
+            <td>{{empleados.cedula}}</td>
+            <td>{{empleados.fecnac}}</td>
+            <td>{{empleados.cargo}}</td>
+            <td>{{empleados.genero}}</td>
+          </tr>      
+        </tbody>
+      </table>
