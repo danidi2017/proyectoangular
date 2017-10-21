@@ -20,7 +20,7 @@ export class AddComponent implements OnInit {
   }
   onSaveClick(){
     //alert("se ha guardado el cliente: " + this.clientes.nombre);
-    this.ClientesService.clientesList.push(this.clientes);
+    this.ClientesService.crearCliente(this.clientes);
   }
 
 }

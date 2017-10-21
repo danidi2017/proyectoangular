@@ -1,15 +1,43 @@
 <table  border="1">
   <tr>
-    <td>nombre</td>
     <td>cedula</td>
+    <td>nombrecontacto</td>
     <td>direccion</td>
     <td>email</td>
 </tr>
 <tr *ngFor="let clientes of ClientesService.clientesList"> 
-    <td>{{clientes.nombre}}</td>
     <td>{{clientes.cedula}}</td>
+    <td>{{clientes.nombrecontacto}}</td>
     <td>{{clientes.direccion}}</td>
     <td>{{clientes.email}}</td>
 </tr>
 </table>
 <br/>
+
+<!--<div class="example-container mat-elevation-z8">
+    <md-table #table [dataSource]="dataSource">
+
+      <ng-container mdColumnDef="cedula">
+        <md-header-cell *mdHeaderCellDef> Cedula </md-header-cell>
+        <md-cell *mdCellDef="let element"> {{element.cedula}} </md-cell>
+      </ng-container>
+  
+      <ng-container mdColumnDef="nombrecontacto">
+        <md-header-cell *mdHeaderCellDef> Nombre </md-header-cell>
+        <md-cell *mdCellDef="let element"> {{element.nombrecontacto}} </md-cell>
+      </ng-container>
+  
+      <ng-container mdColumnDef="direccion">
+        <md-header-cell *mdHeaderCellDef> Dirección </md-header-cell>
+        <md-cell *mdCellDef="let element"> {{element.direccion}} </md-cell>
+      </ng-container>
+  
+      <ng-container mdColumnDef="email">
+        <md-header-cell *mdHeaderCellDef> Email </md-header-cell>
+        <md-cell *mdCellDef="let element"> {{element.email}} </md-cell>
+      </ng-container>
+  
+      <md-header-row *mdHeaderRowDef="displayedColumns"></md-header-row>
+      <md-row *mdRowDef="let row; columns: displayedColumns;"></md-row>
+    </md-table>
+  </div>-->

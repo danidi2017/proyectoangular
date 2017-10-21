@@ -38,13 +38,15 @@ import {
   } from '@angular/material';
 
 import{IndexComponent}from './clientes/index/index.component';
-import{AddComponent as ordenesaddcomponent} from './ordenes/add/add.component';
+import{IndexComponent as ordenesaddcomponent} from './ordenes/index/index.component';
+import{IndexComponent as empleadoindexcomponent}from './empleados/index/index.component';
 
 
 
 const appRoutes: Routes = [
   {path:  'clientes/index',component: IndexComponent},
-  {path:  'ordenes/add',component: ordenesaddcomponent},
+  {path:  'ordenes/index',component: ordenesaddcomponent},
+  {path:  'empleados/index',component: empleadoindexcomponent},
  
 ]
 
@@ -60,12 +62,14 @@ import{DetalleModule}from './detalle/detalle.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { CurrentOptionComponent } from './current-option/current-option.component';
+import { TableBasicExample } from './table/table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    CurrentOptionComponent
+    CurrentOptionComponent,
+    TableBasicExample
   ],
   imports: [
     BrowserModule,

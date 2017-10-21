@@ -1,16 +1,15 @@
-<table  border="1">
-  <tr>
-    <td>empleado</td>
-    <td>cliente</td>
-    <td>fecha</td>
-    <td>descuento</td>
-</tr>
-<tr *ngFor="let ordenes of OrdenesService.ordenesList"> 
-    <td>{{ordenes.empleado}}</td>
-    <td>{{ordenes.cliente}}</td>
-    <td>{{ordenes.fecha}}</td>
-    <td>{{ordenes.descuento}}</td>
-</tr>
-</table>
-<br/>
-
+<table  border ="1">
+        <tr>
+          <td>fecha</td>
+          <td>proveedor</td>
+          <td>cliente</td>
+          <td>producto</td>
+      </tr>
+      <tr *ngFor="let ordenes of OrdenesService.ordenesList"> 
+          <td>{{ordenes.fecha}}</td>
+          <td>{{ordenes.proveedor}}</td>
+          <td>{{ordenes.cliente}}</td>
+          <td>{{ordenes.producto}}</td>
+      </tr>
+      </table>
+      <br/>

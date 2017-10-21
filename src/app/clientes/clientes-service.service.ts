@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { clientes } from "./clientes";
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 
@@ -7,37 +8,22 @@ export class ClientesService {
 
   clientesList:Array<clientes>;
 
-  constructor() { 
-    
-    this.clientesList = [
-      {
-      nombre:"jose",
-      cedula: 12345,
-      direccion:"sultana",
-      email:"daniel@2010"
-      },
-      
-      {
-        nombre:"manuel",
-        cedula: 123564,
-        direccion:"sultana",
-        email:"manuel@2010"
-        },
-      {
-          nombre:"maria",
-          cedula: 234456,
-          direccion:"sultana",
-          email:"maria@2010"
-          },
-      {
-            nombre:"oscar",
-            cedula: 23445,
-            direccion:"sultana",
-            email:"oscar@2010"
-            },
-    ];
-  }
-
+  constructor(private http: HttpClient) { }
+  
+    cargarCliente() {
+      this.http.get("http://localhost:8080/proyectoangular/webresources/co.edu.inventario.entidades.clientes").subscribe(data => {
+        this.clientesList = data as Array<clientes>;
+      });
+    }
+  
+    crearCliente(cliente: clientes) {
+      const body = {cedula:cliente.cedula,direccion:cliente.direccion,nombrecontacto:cliente.nombrecontacto,email:cliente.email};
+      this.http.post("http://localhost:8080/proyectoangular/webresources/co.edu.inventario.entidades.clientes", body)
+      .subscribe(data => {
+        alert('Cliente Creado');
+        this.cargarCliente();
+      });
+    }
   }
 
 

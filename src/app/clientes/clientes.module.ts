@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import {
   MdAutocompleteModule, 
@@ -78,7 +78,8 @@ import { ClientesService } from "./clientes-service.service";
     MdTabsModule,
     MdToolbarModule,
     MdTooltipModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule 
   ],
   declarations: [AddComponent, ListComponent, IndexComponent],
   providers: [ClientesService],

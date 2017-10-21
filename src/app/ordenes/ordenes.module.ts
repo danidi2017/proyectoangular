@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
+import { HttpClientModule } from '@angular/common/http';
 import {
   MdAutocompleteModule, 
   MdButtonModule,
@@ -78,7 +78,8 @@ import { OrdenesService } from "./ordenes-service.service";
     MdTabsModule,
     MdToolbarModule,
     MdTooltipModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   declarations: [AddComponent, ListComponent, IndexComponent],
   providers: [OrdenesService],

@@ -22,7 +22,7 @@ export class AddComponent implements OnInit {
   }
   onSaveClick(){
     //alert("se ha guardado el cliente: " + this.clientes.nombre);
-    this.OrdenesService.ordenesList.push(this.ordenes);
+    this.OrdenesService.crearOrdenes(this.ordenes);
   }
 
 }

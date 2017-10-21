@@ -3,7 +3,7 @@
       <tr>
         <td>
             <md-form-field>
-                <input required mdInput placeholder="Empleados" [(ngModel)]="ordenes.empleados" name="empleados" #empleados="ngModel">
+                <input required mdInput placeholder="Fecha" [(ngModel)]="ordenes.fecha" name="fecha" #fecha="ngModel">
                 <md-error>
                   Por Favor Ingrese un Nombre de empleado Valido
                 </md-error>
@@ -13,7 +13,7 @@
       <tr>
           <td>
               <md-form-field>
-                  <input required mdInput placeholder="Cliente" [(ngModel)]="ordenes.cliente" name="cliente" #cliente="ngModel">
+                  <input required mdInput placeholder="Proveedor" [(ngModel)]="ordenes.proveedor" name="proveedor" #proveedor="ngModel">
                   <md-error>
                     Por Favor Ingrese un id de cliente  Valido
                   </md-error>
@@ -23,13 +23,23 @@
       <tr>
           <td>
               <md-form-field>
-                  <input required mdInput placeholder="Fecha" [(ngModel)]="ordenes.fecha" name="fecha" #fecha="ngModel">
+                  <input required mdInput placeholder="Cliente" [(ngModel)]="ordenes.cliente" name="cliente" #cliente="ngModel">
                   <md-error>
                     Por Favor Ingrese una fecha Valida
                   </md-error>
                 </md-form-field>
           </td>
       </tr>
+      <tr>
+        <td>
+            <md-form-field>
+                <input required mdInput placeholder="Producto" [(ngModel)]="ordenes.producto" name="producto" #producto="ngModel">
+                <md-error>
+                  Por Favor Ingrese un descuento Valida
+                </md-error>
+              </md-form-field>
+        </td>
+    </tr>
                <tr>
                 <td>
                     <div class="button-row">

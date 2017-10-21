@@ -12,6 +12,7 @@ export class ListComponent implements OnInit {
   constructor(private ClientesService: ClientesService) { }
 
   ngOnInit() {
+    this.ClientesService.cargarCliente();
   }
 
 }

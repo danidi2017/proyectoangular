@@ -3,9 +3,9 @@
     <tr>
       <td>
           <md-form-field>
-              <input required mdInput placeholder="Nombre" [(ngModel)]="clientes.nombre" name="nombre" #nombre="ngModel">
+              <input required mdInput placeholder="Cedula" [(ngModel)]="clientes.cedula" name="cedula" #cedula="ngModel">
               <md-error>
-                Por Favor Ingrese un Nombre Valido
+                Por Favor Ingrese una cedula Valido
               </md-error>
             </md-form-field>
       </td>
@@ -13,9 +13,9 @@
     <tr>
         <td>
             <md-form-field>
-                <input required mdInput placeholder="Cedula" [(ngModel)]="clientes.cedula" name="cedula" #cedula="ngModel">
+                <input required mdInput placeholder="NombreContacto" [(ngModel)]="clientes.nombrecontacto" name="nombrecontacto" #nombrecontacto="ngModel">
                 <md-error>
-                  Por Favor Ingrese un Numero de Cedula Valido
+                  Por Favor Ingrese un Nombre de Contacto Valido
                 </md-error>
               </md-form-field>
         </td>
@@ -30,6 +30,16 @@
               </md-form-field>
         </td>
     </tr>
+    <tr>
+      <td>
+          <md-form-field>
+              <input required mdInput placeholder="Email" [(ngModel)]="clientes.email" name="email" #email="ngModel">
+              <md-error>
+                Por Favor Ingrese un email Valido
+              </md-error>
+            </md-form-field>
+      </td>
+  </tr>
              <tr>
               <td>
                   <div class="button-row">
