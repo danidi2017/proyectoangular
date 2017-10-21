@@ -1,4 +1,4 @@
-<form #addform="ngForm">
+<!--<form #addform="ngForm">
     AGREGAR EMPLEADOS
   <table>
     <tr>
@@ -51,5 +51,30 @@
              </td>
               </tr>
   </table>
-</form>
+</form>-->
+
+<div class="container">
+    <form>
+        <div class="form-group">
+          <b><label for="cedula">Cedula</label></b>
+          <input type="text" class="form-control" id="cedula" aria-describedby="emailHelp" placeholder="Cedula" [(ngModel)]="empleados.cedula" name="cedula" #cedula="ngModel">
+          <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+        </div>
+        <div class="form-group">
+            <b><label for="Fecha nacimiento">Fecha nacimiento</label></b>
+          <input type="text" class="form-control" id="Fecha nacimiento" placeholder="Fecha nacimiento" [(ngModel)]="empleados.fecnac" name="fechnac" #fecnac="ngModel" >
+        </div>
+        <div class="form-group">
+            <b><label for="Cargo">Cargo</label></b>
+            <input type="text" class="form-control" id="Cargo" placeholder="Cargo"  [(ngModel)]="empleados.cargo" name="cargo" #cargo="ngModel">
+          </div>
+          <div class="form-group">
+              <b><label for="Genero">Genero</label></b>
+              <input type="text" class="form-control" id="Genero" placeholder="Genero" [(ngModel)]="empleados.genero" name="genero" #genero="ngModel">
+            </div>
+            <button [disabled]="!addform.valid" md-raised-button color="accent" (click)="onSaveClick()">Guardar</button>
+            <button md-raised-button color="accent" (click)="onNewClick()">Nuevo Registro</button>
+       <!-- <button type="submit" class="btn btn-primary">Submit</button>-->
+      </form>
+    </div>
 
